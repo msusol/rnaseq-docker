@@ -7,10 +7,9 @@ For nf-core/rnaseq on an M‑series Mac with Rancher Desktop, install Java and N
   - `curl -s https://get.nextflow.io | bash`  
   - `chmod +x nextflow` and move it into a directory on your PATH (for example `$HOME/.local/bin` or a MacPorts‑managed bin dir), then verify with `nextflow info`. [nextflow](https://www.nextflow.io/docs/stable/install.html)
 
-## 2. Configure Rancher Desktop as the Docker engine
+## 2. Docker Desktop as the Docker engine
 
-- In Rancher Desktop settings, enable the **dockerd/moby** backend (or containerd with a Docker‑compatible socket) and confirm `docker ps` works in your terminal. [rancherdesktop](https://rancherdesktop.io)
-- Export the Rancher Docker socket in your shell, for example `export DOCKER_HOST=unix://$HOME/.rd/docker.sock`, so Nextflow’s `docker` executor talks to Rancher’s engine. [github](https://github.com/rancher-sandbox/rancher-desktop/discussions/1511)
+- Only use **Docker Desktop**, versus Rancher Desktop or Podman.
 
 ## 3. Apple Silicon image settings
 
