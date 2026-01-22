@@ -1,0 +1,39 @@
+# Nextflow cache and work directories
+*/.nextflow
+*/work/
+.nextflow.log*
+
+# Large data files
+research/data/refs/*.fa
+research/data/refs/*.fa.fai
+research/data/refs/*.gtf
+research/data/refs/*.gff
+research/data/refs/*.fa.gz
+research/data/refs/*.gtf.gz
+research/data/refs/gencode.v29.*
+training/data/refs/*.fa
+training/data/refs/*.fa.fai
+training/data/refs/*.gtf
+training/data/refs/*.gff
+training/data/refs/*.fa.gz
+training/data/refs/*.gtf.gz
+
+# Results directories
+results*/
+*/results*/
+
+# Docker volumes and logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*~

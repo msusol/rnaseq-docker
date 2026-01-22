@@ -1,0 +1,5 @@
+sample,fastq_1,fastq_2,strandedness
+CONTROL_REP1,data/reads/CONTROL_REP1_R1.fastq.gz,data/reads/CONTROL_REP1_R2.fastq.gz,auto
+CONTROL_REP2,data/reads/CONTROL_REP2_R1.fastq.gz,data/reads/CONTROL_REP2_R2.fastq.gz,auto
+TREATMENT_REP1,data/reads/TREATMENT_REP1_R1.fastq.gz,data/reads/TREATMENT_REP1_R2.fastq.gz,auto
+TREATMENT_REP2,data/reads/TREATMENT_REP2_R1.fastq.gz,data/reads/TREATMENT_REP2_R2.fastq.gz,auto

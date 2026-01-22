@@ -1,0 +1,21 @@
+services:
+  rnaseq:
+    build:
+      context: .
+      dockerfile: container/Dockerfile
+    image: rnaseq-docker-rstudio:arm64
+    platform: linux/arm64
+    container_name: rnaseq-server
+    ports:
+      - "8787:8787"
+    environment:
+      - PASSWORD=yourpassword  # Change this to a secure password
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./work:/home/rstudio/work
+      - ./results:/home/rstudio/results
+      - ./training:/home/rstudio/training
+      - ./research:/home/rstudio/research
+    user: root
+    restart: unless-stopped

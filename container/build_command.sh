@@ -1,0 +1,15 @@
+docker buildx build \
+--label org.opencontainers.image.title=rnaseq-docker-rstudio \
+--label org.opencontainers.image.description='ARM64 RStudio Server with bioinformatics packages for RNA-seq analysis' \
+--label org.opencontainers.image.url=https://github.com/nf-core/rnaseq \
+--label org.opencontainers.image.source=https://github.com/nf-core/rnaseq \
+--label org.opencontainers.image.version=1.0.0 \
+--label org.opencontainers.image.created=2026-01-18T17:03:15.000Z \
+--label org.opencontainers.image.licenses=MIT \
+--cache-to=type=local,dest=/tmp/build_caches \
+--cache-from=type=local,src=/tmp/build_caches \
+--platform linux/arm64 \
+--tag rnaseq-docker-rstudio:arm64 \
+--tag rnaseq-docker-rstudio:latest \
+--file container/Dockerfile \
+--load .
